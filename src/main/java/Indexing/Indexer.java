@@ -1,7 +1,9 @@
 package Indexing;
 
-import Indexing.Model.*;
-import Indexing.Translator.*;
+import Indexing.Model.Model;
+import Indexing.Translator.Converter;
+import Indexing.Translator.GeneralConverter;
+import Util.Utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
