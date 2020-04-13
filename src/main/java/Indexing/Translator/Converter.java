@@ -1,9 +1,12 @@
-package Translator;
+package Indexing.Translator;
 
-import Model.Business.*;
+import Indexing.Model.*;
 import org.apache.lucene.document.Document;
+import org.apache.lucene.document.FieldType;
 
 public interface Converter {
+    FieldType textFt  = new FieldType();
+    FieldType stringFt  = new FieldType();
     Document Convert(Model biz) throws Exception;
     public static <T extends Model> Converter getConverter(Class<T> model) {
         if(model == Review.class)

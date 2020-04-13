@@ -1,15 +1,26 @@
-package Translator;
+package Indexing.Translator;
 
-import Model.Business.Business;
-import Model.Business.Hours;
-import Model.Business.Model;
-import Model.Business.User;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import Indexing.Model.Model;
+import Indexing.Model.User;
 import org.apache.lucene.document.*;
-
-import java.util.Optional;
+import org.apache.lucene.index.IndexOptions;
 
 public class UserConverter implements Converter {
+
+    public UserConverter () {
+        textFt.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+        textFt.setStored(true);
+        textFt.setTokenized(true);
+        textFt.setStoreTermVectorOffsets(true);
+        textFt.setStoreTermVectorPositions(true);
+        textFt.setStoreTermVectors(true);
+        stringFt.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+        stringFt.setStored(true);
+        stringFt.setTokenized(false);
+        stringFt.setStoreTermVectorOffsets(true);
+        stringFt.setStoreTermVectorPositions(true);
+        stringFt.setStoreTermVectors(true);
+    }
 
     public Document Convert(Model usr) throws  Exception {
         Document doc = new Document();
@@ -29,7 +40,7 @@ public class UserConverter implements Converter {
                     case "yelpingSince":
                     case "elite":
                     case "friends":
-                        doc.add(new TextField(field.getName(), key.replace(",", " "), Field.Store.YES));
+                        doc.add(new Field(field.getName(), key.replace(",", " "), textFt));
                         break;
                     default:
                         break;

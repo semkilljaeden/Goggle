@@ -26,6 +26,16 @@ dependencies {
     compile group: 'org.apache.lucene', name: 'lucene-backward-codecs', version: '8.5.0'
 // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.2'
+    compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '8.5.0'
+// https://mvnrepository.com/artifact/org.apache.lucene/lucene-join
+    compile group: 'org.apache.lucene', name: 'lucene-join', version: '8.5.0'
+// https://mvnrepository.com/artifact/org.apache.lucene/lucene-misc
+    compile group: 'org.apache.lucene', name: 'lucene-misc', version: '8.5.0'
+// https://mvnrepository.com/artifact/org.apache.commons/commons-math3
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
 
 
+}
+test {
+    useJUnitPlatform()
 }

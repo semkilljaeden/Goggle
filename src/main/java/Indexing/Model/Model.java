@@ -1,4 +1,4 @@
-package Model.Business;
+package Indexing.Model;
 
 public interface Model {
 }

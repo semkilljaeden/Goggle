@@ -1,14 +1,8 @@
-package Translator;
+package Indexing.Translator;
 
 import org.apache.lucene.document.*;
-import org.apache.lucene.index.FieldInfo;
-import org.apache.lucene.index.IndexOptions;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
-import java.io.*;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 public class GeneralConverter {

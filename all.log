@@ -1,126 +1,37 @@
-2020-04-10 01:58:38.176 [main] INFO  Program - Start to parse yelp_academic_dataset_business.json
-2020-04-10 01:58:38.179 [main] INFO  Program - 0 row parsed
-2020-04-10 01:58:47.756 [main] INFO  Program - 100000 row parsed
-2020-04-10 01:58:55.858 [main] INFO  Program - 200000 row parsed
-2020-04-10 01:58:56.784 [main] INFO  Program - 209393 yelp_academic_dataset_business.json total rows parsed
-2020-04-10 01:58:56.784 [main] INFO  Program - Start to parse yelp_academic_dataset_review.json
-2020-04-10 01:58:56.785 [main] INFO  Program - 0 row parsed
-2020-04-10 01:59:04.673 [main] INFO  Program - 100000 row parsed
-2020-04-10 01:59:12.571 [main] INFO  Program - 200000 row parsed
-2020-04-10 01:59:20.417 [main] INFO  Program - 300000 row parsed
-2020-04-10 01:59:28.961 [main] INFO  Program - 400000 row parsed
-2020-04-10 01:59:37.312 [main] INFO  Program - 500000 row parsed
-2020-04-10 01:59:46.072 [main] INFO  Program - 600000 row parsed
-2020-04-10 01:59:54.383 [main] INFO  Program - 700000 row parsed
-2020-04-10 02:00:02.731 [main] INFO  Program - 800000 row parsed
-2020-04-10 02:00:10.512 [main] INFO  Program - 900000 row parsed
-2020-04-10 02:00:18.739 [main] INFO  Program - 1000000 row parsed
-2020-04-10 02:00:26.576 [main] INFO  Program - 1100000 row parsed
-2020-04-10 02:00:34.813 [main] INFO  Program - 1200000 row parsed
-2020-04-10 02:00:42.721 [main] INFO  Program - 1300000 row parsed
-2020-04-10 02:00:51.284 [main] INFO  Program - 1400000 row parsed
-2020-04-10 02:00:59.405 [main] INFO  Program - 1500000 row parsed
-2020-04-10 02:01:07.685 [main] INFO  Program - 1600000 row parsed
-2020-04-10 02:01:15.575 [main] INFO  Program - 1700000 row parsed
-2020-04-10 02:01:23.643 [main] INFO  Program - 1800000 row parsed
-2020-04-10 02:01:31.492 [main] INFO  Program - 1900000 row parsed
-2020-04-10 02:01:39.495 [main] INFO  Program - 2000000 row parsed
-2020-04-10 02:01:47.562 [main] INFO  Program - 2100000 row parsed
-2020-04-10 02:01:55.696 [main] INFO  Program - 2200000 row parsed
-2020-04-10 02:02:03.788 [main] INFO  Program - 2300000 row parsed
-2020-04-10 02:02:12.215 [main] INFO  Program - 2400000 row parsed
-2020-04-10 02:02:20.167 [main] INFO  Program - 2500000 row parsed
-2020-04-10 02:02:27.969 [main] INFO  Program - 2600000 row parsed
-2020-04-10 02:02:35.659 [main] INFO  Program - 2700000 row parsed
-2020-04-10 02:02:43.675 [main] INFO  Program - 2800000 row parsed
-2020-04-10 02:02:51.445 [main] INFO  Program - 2900000 row parsed
-2020-04-10 02:02:59.578 [main] INFO  Program - 3000000 row parsed
-2020-04-10 02:03:07.774 [main] INFO  Program - 3100000 row parsed
-2020-04-10 02:03:15.808 [main] INFO  Program - 3200000 row parsed
-2020-04-10 02:03:23.931 [main] INFO  Program - 3300000 row parsed
-2020-04-10 02:03:31.740 [main] INFO  Program - 3400000 row parsed
-2020-04-10 02:03:39.629 [main] INFO  Program - 3500000 row parsed
-2020-04-10 02:03:47.277 [main] INFO  Program - 3600000 row parsed
-2020-04-10 02:03:55.015 [main] INFO  Program - 3700000 row parsed
-2020-04-10 02:04:03.532 [main] INFO  Program - 3800000 row parsed
-2020-04-10 02:04:11.934 [main] INFO  Program - 3900000 row parsed
-2020-04-10 02:04:20.291 [main] INFO  Program - 4000000 row parsed
-2020-04-10 02:04:29.124 [main] INFO  Program - 4100000 row parsed
-2020-04-10 02:04:36.796 [main] INFO  Program - 4200000 row parsed
-2020-04-10 02:04:45.285 [main] INFO  Program - 4300000 row parsed
-2020-04-10 02:04:52.883 [main] INFO  Program - 4400000 row parsed
-2020-04-10 02:05:01.839 [main] INFO  Program - 4500000 row parsed
-2020-04-10 02:05:09.870 [main] INFO  Program - 4600000 row parsed
-2020-04-10 02:05:18.991 [main] INFO  Program - 4700000 row parsed
-2020-04-10 02:05:27.915 [main] INFO  Program - 4800000 row parsed
-2020-04-10 02:05:35.938 [main] INFO  Program - 4900000 row parsed
-2020-04-10 02:05:43.785 [main] INFO  Program - 5000000 row parsed
-2020-04-10 02:05:51.745 [main] INFO  Program - 5100000 row parsed
-2020-04-10 02:06:00.020 [main] INFO  Program - 5200000 row parsed
-2020-04-10 02:06:08.204 [main] INFO  Program - 5300000 row parsed
-2020-04-10 02:06:16.678 [main] INFO  Program - 5400000 row parsed
-2020-04-10 02:06:25.251 [main] INFO  Program - 5500000 row parsed
-2020-04-10 02:06:34.241 [main] INFO  Program - 5600000 row parsed
-2020-04-10 02:06:42.209 [main] INFO  Program - 5700000 row parsed
-2020-04-10 02:06:50.395 [main] INFO  Program - 5800000 row parsed
-2020-04-10 02:06:58.793 [main] INFO  Program - 5900000 row parsed
-2020-04-10 02:07:06.536 [main] INFO  Program - 6000000 row parsed
-2020-04-10 02:07:15.370 [main] INFO  Program - 6100000 row parsed
-2020-04-10 02:07:23.855 [main] INFO  Program - 6200000 row parsed
-2020-04-10 02:07:33.986 [main] INFO  Program - 6300000 row parsed
-2020-04-10 02:07:42.572 [main] INFO  Program - 6400000 row parsed
-2020-04-10 02:07:50.593 [main] INFO  Program - 6500000 row parsed
-2020-04-10 02:07:58.553 [main] INFO  Program - 6600000 row parsed
-2020-04-10 02:08:07.310 [main] INFO  Program - 6700000 row parsed
-2020-04-10 02:08:15.293 [main] INFO  Program - 6800000 row parsed
-2020-04-10 02:08:23.223 [main] INFO  Program - 6900000 row parsed
-2020-04-10 02:08:31.299 [main] INFO  Program - 7000000 row parsed
-2020-04-10 02:08:39.385 [main] INFO  Program - 7100000 row parsed
-2020-04-10 02:08:47.205 [main] INFO  Program - 7200000 row parsed
-2020-04-10 02:08:55.753 [main] INFO  Program - 7300000 row parsed
-2020-04-10 02:09:03.588 [main] INFO  Program - 7400000 row parsed
-2020-04-10 02:09:12.337 [main] INFO  Program - 7500000 row parsed
-2020-04-10 02:09:20.345 [main] INFO  Program - 7600000 row parsed
-2020-04-10 02:09:29.103 [main] INFO  Program - 7700000 row parsed
-2020-04-10 02:09:37.394 [main] INFO  Program - 7800000 row parsed
-2020-04-10 02:09:45.604 [main] INFO  Program - 7900000 row parsed
-2020-04-10 02:09:54.715 [main] INFO  Program - 8000000 row parsed
-2020-04-10 02:09:56.493 [main] INFO  Program - 8021122 yelp_academic_dataset_review.json total rows parsed
-2020-04-10 02:09:56.494 [main] INFO  Program - Start to parse yelp_academic_dataset_tip.json
-2020-04-10 02:09:56.494 [main] INFO  Program - 0 row parsed
-2020-04-10 02:09:59.966 [main] INFO  Program - 100000 row parsed
-2020-04-10 02:10:03.367 [main] INFO  Program - 200000 row parsed
-2020-04-10 02:10:06.513 [main] INFO  Program - 300000 row parsed
-2020-04-10 02:10:10.068 [main] INFO  Program - 400000 row parsed
-2020-04-10 02:10:13.921 [main] INFO  Program - 500000 row parsed
-2020-04-10 02:10:17.124 [main] INFO  Program - 600000 row parsed
-2020-04-10 02:10:20.519 [main] INFO  Program - 700000 row parsed
-2020-04-10 02:10:23.928 [main] INFO  Program - 800000 row parsed
-2020-04-10 02:10:27.345 [main] INFO  Program - 900000 row parsed
-2020-04-10 02:10:30.505 [main] INFO  Program - 1000000 row parsed
-2020-04-10 02:10:33.971 [main] INFO  Program - 1100000 row parsed
-2020-04-10 02:10:37.349 [main] INFO  Program - 1200000 row parsed
-2020-04-10 02:10:40.696 [main] INFO  Program - 1300000 row parsed
-2020-04-10 02:10:41.343 [main] INFO  Program - 1320761 yelp_academic_dataset_tip.json total rows parsed
-2020-04-10 02:10:41.343 [main] INFO  Program - Start to parse yelp_academic_dataset_user.json
-2020-04-10 02:10:41.344 [main] INFO  Program - 0 row parsed
-2020-04-10 02:11:08.258 [main] INFO  Program - 100000 row parsed
-2020-04-10 02:11:19.650 [main] INFO  Program - 200000 row parsed
-2020-04-10 02:11:50.523 [main] INFO  Program - 300000 row parsed
-2020-04-10 02:11:59.449 [main] INFO  Program - 400000 row parsed
-2020-04-10 02:12:23.411 [main] INFO  Program - 500000 row parsed
-2020-04-10 02:12:32.094 [main] INFO  Program - 600000 row parsed
-2020-04-10 02:12:57.831 [main] INFO  Program - 700000 row parsed
-2020-04-10 02:13:05.755 [main] INFO  Program - 800000 row parsed
-2020-04-10 02:13:26.459 [main] INFO  Program - 900000 row parsed
-2020-04-10 02:13:35.158 [main] INFO  Program - 1000000 row parsed
-2020-04-10 02:13:58.572 [main] INFO  Program - 1100000 row parsed
-2020-04-10 02:14:07.657 [main] INFO  Program - 1200000 row parsed
-2020-04-10 02:14:26.519 [main] INFO  Program - 1300000 row parsed
-2020-04-10 02:14:35.403 [main] INFO  Program - 1400000 row parsed
-2020-04-10 02:14:56.593 [main] INFO  Program - 1500000 row parsed
-2020-04-10 02:15:05.109 [main] INFO  Program - 1600000 row parsed
-2020-04-10 02:15:24.702 [main] INFO  Program - 1700000 row parsed
-2020-04-10 02:15:33.327 [main] INFO  Program - 1800000 row parsed
-2020-04-10 02:15:50.890 [main] INFO  Program - 1900000 row parsed
-2020-04-10 02:15:53.669 [main] INFO  Program - 1968703 yelp_academic_dataset_user.json total rows parsed
+2020-04-13 09:36:18.153 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 1 name(top frequent word):BC contains 2 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 2 name(top frequent word):HI contains 1 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 3 name(top frequent word):TX contains 6 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 4 name(top frequent word):HPL contains 1 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 5 name(top frequent word):FL contains 3 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 6 name(top frequent word):NV contains 39084 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 7 name(top frequent word):WA contains 5 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 8 name(top frequent word):NY contains 22 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 9 name(top frequent word):SC contains 1328 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 10 name(top frequent word):QC contains 10233 docs
+2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 11 name(top frequent word):WI contains 5525 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 12 name(top frequent word):MB contains 1 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 13 name(top frequent word):OH contains 16392 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 14 name(top frequent word):GA contains 3 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 15 name(top frequent word):YT contains 1 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 16 name(top frequent word):MI contains 2 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 17 name(top frequent word):CA contains 23 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 18 name(top frequent word):ON contains 36627 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 19 name(top frequent word):UT contains 2 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 20 name(top frequent word):DUR contains 1 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 21 name(top frequent word):AB contains 8682 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 22 name(top frequent word):MO contains 1 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 23 name(top frequent word):IL contains 2034 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 24 name(top frequent word):OR contains 1 docs
+2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 25 name(top frequent word):AK contains 1 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 26 name(top frequent word):AL contains 3 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 27 name(top frequent word):VA contains 1 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 28 name(top frequent word):CO contains 2 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 29 name(top frequent word):DOW contains 1 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 30 name(top frequent word):PA contains 12376 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 31 name(top frequent word):AR contains 1 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 32 name(top frequent word):CT contains 2 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 33 name(top frequent word):NC contains 16218 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 34 name(top frequent word):NE contains 2 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 35 name(top frequent word):AZ contains 60803 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 36 name(top frequent word):XWY contains 1 docs
+2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 37 name(top frequent word):VT contains 2 docs

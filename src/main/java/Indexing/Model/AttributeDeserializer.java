@@ -1,4 +1,4 @@
-package Model.Business;
+package Indexing.Model;
 import java.util.*;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

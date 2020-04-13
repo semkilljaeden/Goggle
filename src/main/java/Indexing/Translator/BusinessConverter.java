@@ -1,25 +1,39 @@
-package Translator;
+package Indexing.Translator;
 
-import Model.Business.Business;
-import Model.Business.Hours;
-import Model.Business.Model;
+import Indexing.Model.Business;
+import Indexing.Model.Hours;
+import Indexing.Model.Model;
 import org.apache.lucene.document.*;
-import org.apache.lucene.document.Field;
+import org.apache.lucene.index.IndexOptions;
 
-import java.lang.reflect.*;
 import java.util.Optional;
 
 public class BusinessConverter implements Converter {
+
+    public BusinessConverter () {
+        textFt.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+        textFt.setStored(true);
+        textFt.setTokenized(true);
+        textFt.setStoreTermVectorOffsets(true);
+        textFt.setStoreTermVectorPositions(true);
+        textFt.setStoreTermVectors(true);
+        stringFt.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+        stringFt.setStored(true);
+        stringFt.setTokenized(false);
+        stringFt.setStoreTermVectorOffsets(true);
+        stringFt.setStoreTermVectorPositions(true);
+        stringFt.setStoreTermVectors(true);
+    }
 
     public Document Convert(Model b) throws Exception {
         Business biz = (Business) b;
         Document doc = new Document();
         doc.add(new StringField("business_id", biz.businessId, Field.Store.YES));
-        doc.add(new TextField("name", biz.name, Field.Store.YES));
-        doc.add(new TextField("address", biz.address, Field.Store.YES));
-        doc.add(new StringField("city", biz.city, Field.Store.YES));
-        doc.add(new StringField("state", biz.state, Field.Store.YES));
-        doc.add(new StringField("postal_code", biz.postalCode, Field.Store.YES));
+        doc.add(new Field("name", biz.name, textFt));
+        doc.add(new Field("address", biz.address, textFt));
+        doc.add(new Field("city", biz.city, stringFt));
+        doc.add(new Field("state", biz.state, stringFt));
+        doc.add(new Field("postal_code", biz.postalCode, stringFt));
         doc.add(new DoublePoint("latitude", biz.latitude));
         doc.add(new StoredField("latitude", biz.latitude));
         doc.add(new DoublePoint("longitude", biz.longitude));
@@ -28,11 +42,11 @@ public class BusinessConverter implements Converter {
         doc.add(new StoredField("stars", biz.stars));
         doc.add(new IntPoint("review_count", biz.reviewCount));
         doc.add(new StoredField("review_count", biz.reviewCount));
-        doc.add(new StringField("is_open", biz.isOpen == 1 ? "True" : "False", Field.Store.YES));
-        doc.add(new TextField("categories", Optional.ofNullable(biz.categories).orElse(""), Field.Store.YES));
+        doc.add(new Field("is_open", biz.isOpen == 1 ? "True" : "False", stringFt));
+        doc.add(new Field("categories", Optional.ofNullable(biz.categories).orElse(""), textFt));
         if(biz.attributes != null) {
             biz.attributes.entrySet().forEach(set -> {
-                doc.add(new StringField(set.getKey(), set.getValue(), Field.Store.YES));
+                doc.add(new Field(set.getKey(), set.getValue(), textFt));
             });
         }
 

@@ -1,18 +1,31 @@
-package Translator;
+package Indexing.Translator;
 
-import Model.Business.Model;
-import Model.Business.Tip;
-import Model.Business.User;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import Indexing.Model.Model;
+import Indexing.Model.Review;
 import org.apache.lucene.document.*;
+import org.apache.lucene.index.IndexOptions;
 
 import java.util.Date;
 
-public class TipConverter implements Converter {
+public class ReviewConverter implements Converter {
 
+    public ReviewConverter () {
+        textFt.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+        textFt.setStored(true);
+        textFt.setTokenized(true);
+        textFt.setStoreTermVectorOffsets(true);
+        textFt.setStoreTermVectorPositions(true);
+        textFt.setStoreTermVectors(true);
+        stringFt.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+        stringFt.setStored(true);
+        stringFt.setTokenized(false);
+        stringFt.setStoreTermVectorOffsets(true);
+        stringFt.setStoreTermVectorPositions(true);
+        stringFt.setStoreTermVectors(true);
+    }
     public Document Convert(Model usr) throws  Exception {
         Document doc = new Document();
-        java.lang.reflect.Field[] fields = Tip.class.getDeclaredFields();
+        java.lang.reflect.Field[] fields = Review.class.getDeclaredFields();
         for (java.lang.reflect.Field field : fields) {
             if(field.get(usr) == null) {
                 continue;
@@ -23,14 +36,14 @@ public class TipConverter implements Converter {
                 switch (field.getName()) {
                     case "userId":
                     case "businessId":
+                    case "reviewId":
                         doc.add(new StringField(field.getName(), key, Field.Store.YES));
                         break;
                     case "text":
-                        doc.add(new TextField(field.getName(), key, Field.Store.YES));
+                        doc.add(new Field(field.getName(), key, textFt));
                         break;
                     default:
                         break;
-
                 }
             }
             else if(value instanceof Date) {
@@ -49,7 +62,6 @@ public class TipConverter implements Converter {
                 throw new Exception("invalid DataType");
             }
         }
-
         return doc;
 
     }
