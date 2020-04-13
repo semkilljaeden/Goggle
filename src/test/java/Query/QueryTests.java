@@ -4,6 +4,7 @@ import Util.Tuple;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.DoublePoint;
 import org.apache.lucene.document.IntPoint;
@@ -33,6 +34,62 @@ public class QueryTests {
 
     public List<Function<Similarity, Tuple<IndexType, TopDocs>>> buildQueries() {
         LinkedList<Function<Similarity, Tuple<IndexType, TopDocs>>> list = new LinkedList<>();
+
+        /***
+         *  Advance Query for geological query
+         */
+        list.add((Similarity sim) -> {
+            //Find all business that are nearby a gym called Xtreme Couture
+            double epislon = 0.005;
+            try {
+                Query q = new QueryParser("name", new StandardAnalyzer()).parse("name:\"Xtreme Couture MMA\"");
+                TopDocs docs = retriever.query(q, sim, IndexType.Business);
+                Document doc = retriever.getSearcher(IndexType.Business).doc(docs.scoreDocs[0].doc);
+                double latitude = doc.getField("latitude").numericValue().doubleValue();
+                double longitude = doc.getField("longitude").numericValue().doubleValue();
+                Query q2 = DoublePoint.newRangeQuery("latitude", latitude - epislon, latitude + epislon);
+                Query q3 = DoublePoint.newRangeQuery("longitude", longitude - epislon, longitude + epislon);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q2, BooleanClause.Occur.MUST);
+                finalQuery.add(q3, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+
+        list.add((Similarity sim) -> {
+            //Find all restaurants that are nearby a gym called Xtreme Couture
+            double epislon = 0.005;
+            try {
+                Query q = new QueryParser("name", new StandardAnalyzer()).parse("name:\"Xtreme Couture MMA\"");
+                TopDocs docs = retriever.query(q, sim, IndexType.Business);
+                Document doc = retriever.getSearcher(IndexType.Business).doc(docs.scoreDocs[0].doc);
+                double latitude = doc.getField("latitude").numericValue().doubleValue();
+                double longitude = doc.getField("longitude").numericValue().doubleValue();
+                Query q2 = DoublePoint.newRangeQuery("latitude", latitude - epislon, latitude + epislon);
+                Query q3 = DoublePoint.newRangeQuery("longitude", longitude - epislon, longitude + epislon);
+                Query q4 = new QueryParser("", new StandardAnalyzer()).parse("categories: restaurants");
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q2, BooleanClause.Occur.MUST);
+                finalQuery.add(q3, BooleanClause.Occur.MUST);
+                finalQuery.add(q4, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+
+
+
+
+
+        /***
+         *  Normal Query for geological query
+         */
+
         list.add((Similarity sim) -> {
             //yelpingSince: 2010
             try {
