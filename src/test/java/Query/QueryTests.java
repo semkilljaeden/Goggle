@@ -1,20 +1,28 @@
 package Query;
 
+import Util.Tuple;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.DoublePoint;
 import org.apache.lucene.document.IntPoint;
 import org.apache.lucene.index.IndexableField;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.search.*;
-import org.apache.lucene.search.similarities.BM25Similarity;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.similarities.BooleanSimilarity;
 import org.apache.lucene.search.similarities.Similarity;
+import org.junit.Assert;
 import org.junit.Test;
 
-
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.function.Function;
 
 public class QueryTests {
@@ -23,94 +31,222 @@ public class QueryTests {
     private static Logger logger = LogManager.getLogger(QueryTests.class);
 
 
-    public List<Function<Similarity, TopDocs>> buildQueries() {
-        LinkedList<Function<Similarity, TopDocs>> list = new LinkedList<>();
+    public List<Function<Similarity, Tuple<IndexType, TopDocs>>> buildQueries() {
+        LinkedList<Function<Similarity, Tuple<IndexType, TopDocs>>> list = new LinkedList<>();
         list.add((Similarity sim) -> {
-            //Shops that opens after 9am and allows dogin Las Vegas
-            BooleanQuery.Builder b = new BooleanQuery.Builder();
-            b.add(new TermQuery(new Term("city", "Las Vegas")), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("DogsAllowed", "True")), BooleanClause.Occur.MUST);
-            b.add( new TermQuery(new Term("DogsAllowed", "True")), BooleanClause.Occur.MUST);
-            BooleanQuery.Builder sub = new BooleanQuery.Builder();
-            sub.add(IntPoint.newRangeQuery("monday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            sub.add(IntPoint.newRangeQuery("tuesday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            sub.add(IntPoint.newRangeQuery("wednesday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            sub.add(IntPoint.newRangeQuery("thursday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            sub.add(IntPoint.newRangeQuery("friday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            sub.add(IntPoint.newRangeQuery("saturday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            sub.add(IntPoint.newRangeQuery("sunday.openingTime", 900, 2359), BooleanClause.Occur.SHOULD);
-            Query subQuery = sub.build();
-            BooleanQuery.Builder full = new BooleanQuery.Builder();
-            full.add(b.build(), BooleanClause.Occur.MUST);
-            full.add(subQuery, BooleanClause.Occur.MUST);
+            //yelpingSince: 2010
             try {
-                return retriever.query(full.build(), sim, IndexType.Business);
-            } catch (IOException e) {
-                logger.error("io fault", e);
+                Query q = new QueryParser("name", retriever.Analyzer).parse("yelpingSince: 2010");
+                return new Tuple<IndexType, TopDocs>(IndexType.User,retriever.query(q, sim, IndexType.User));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
             }
             return null;
         });
         list.add((Similarity sim) -> {
-            //categories = hotels，BusinessAcceptsCreditCards=True and (WiFi = u'paid' or 'paid')
-            BooleanQuery.Builder b = new BooleanQuery.Builder();
-            b.add(new TermQuery(new Term("categories", "hotels")), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("BusinessAcceptsCreditCards", "True")), BooleanClause.Occur.MUST);
-            BooleanQuery.Builder sub = new BooleanQuery.Builder();
-            sub.add(new TermQuery(new Term("WiFI", "u'paid'")), BooleanClause.Occur.SHOULD);
-            sub.add(new TermQuery(new Term("WiFI", "'paid'")), BooleanClause.Occur.SHOULD);
-            Query subQuery = sub.build();
-            BooleanQuery.Builder full = new BooleanQuery.Builder();
-            full.add(b.build(), BooleanClause.Occur.MUST);
-            full.add(subQuery, BooleanClause.Occur.MUST);
             try {
-                return retriever.query(full.build(), sim, IndexType.Business);
-            } catch (IOException e) {
-                logger.error("io fault", e);
+                Query q = new QueryParser("name", retriever.Analyzer).parse("categories: salons AND Music =dj");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
             }
             return null;
         });
         list.add((Similarity sim) -> {
-            //star >=3 and in Ceveland and accept credit card
-            BooleanQuery.Builder b = new BooleanQuery.Builder();
-            b.add(DoublePoint.newRangeQuery("stars", 3, 10000), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("BusinessAcceptsCreditCards", "True")), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("city", "Cleveland")), BooleanClause.Occur.MUST);
             try {
-                return retriever.query(b.build(), sim, IndexType.Business);
-            } catch (IOException e) {
-                logger.error("io fault", e);
+                //"text:amazing AND stars: [4 TO 5] AND useful>= 100"
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("text:amazing");
+                Query rangeQuery = DoublePoint.newRangeQuery("stars",  4, 5);
+                Query rangeQuery2 = DoublePoint.newRangeQuery("useful",  100, 100000);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery2, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Review,retriever.query(q, sim, IndexType.Review));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
             }
             return null;
         });
         list.add((Similarity sim) -> {
-            //star >=3 and in Ceveland and accept credit card
-            BooleanQuery.Builder b = new BooleanQuery.Builder();
-            b.add(DoublePoint.newRangeQuery("stars", 3, 10000), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("BusinessAcceptsCreditCards", "True")), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("city", "Cleveland")), BooleanClause.Occur.MUST);
             try {
-                return retriever.query(b.build(), sim, IndexType.Business);
-            } catch (IOException e) {
-                logger.error("io fault", e);
+                Query q = new QueryParser("", new WhitespaceAnalyzer()).parse("state: AZ AND categories: automotive AND BusinessAcceptsCreditCards: true");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
             }
             return null;
         });
         list.add((Similarity sim) -> {
-            //modecal store in AZ no business parking valet and no business parking garage
-            BooleanQuery.Builder b = new BooleanQuery.Builder();
-            b.add(new TermQuery(new Term("categories", "medical")), BooleanClause.Occur.MUST);
-            b.add(new TermQuery(new Term("BusinessParking.garage", "False")), BooleanClause.Occur.MUST);
-            BooleanQuery.Builder sub = new BooleanQuery.Builder();
-            sub.add(new TermQuery(new Term("WiFI", "u'paid'")), BooleanClause.Occur.SHOULD);
-            sub.add(new TermQuery(new Term("WiFI", "'paid'")), BooleanClause.Occur.SHOULD);
-            Query subQuery = sub.build();
-            BooleanQuery.Builder full = new BooleanQuery.Builder();
-            full.add(b.build(), BooleanClause.Occur.MUST);
-            full.add(subQuery, BooleanClause.Occur.MUST);
             try {
-                return retriever.query(full.build(), sim, IndexType.Business);
-            } catch (IOException e) {
-                logger.error("io fault", e);
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("categories: restaurants AND (NoiseLevel: u'quiet OR NoiseLevel: quiet)");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("state: NV AND categories: restaurants AND RestaurantsDelivery: true");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("state: AZ AND categories: doctors AND ByAppointmentOnly:false");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("state: NY AND categories: restaurants AND GoodForKids:true");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("categories: hotels AND BusinessAcceptsCreditCards: true AND (WiFi: u'free OR WiFi: free)");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("GoodForKids:true AND BikeParking: true AND Alcohol: u'none");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("postal_code:89109 AND categories: restaurants");
+                Query rangeQuery = DoublePoint.newRangeQuery("stars",  4, 5);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("city: Phoenix AND RestaurantsTakeOut:true AND categories:mexican");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("categories: restaurants AND (RestaurantsAttire: u'casual OR RestaurantsAttire: casual)");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("city: Charlotte AND DriveThru: true AND categories: restaurants");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                //state: NV AND BusinessAcceptsCreditCards = true AND categories: hotels AND stars: [3 TO 5]
+                Query q = new QueryParser("", new WhitespaceAnalyzer()).parse("state: NV AND BusinessAcceptsCreditCards:true AND categories:hotels");
+                Query rangeQuery = DoublePoint.newRangeQuery("stars",  3, 5);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                //DogsAllowed:true AND city:Toronto AND monday.openingTime:0
+                Query q = new QueryParser("", new WhitespaceAnalyzer()).parse("DogsAllowed:true AND city:Toronto");
+                Query rangeQuery = IntPoint.newRangeQuery("monday.openingTime",  0, 0);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                //categories:medical AND state: AZ AND BusinessAcceptsCreditCards:true AND review_count: [20 TO 500]
+                Query q = new QueryParser("", new WhitespaceAnalyzer()).parse("categories:medical AND state: AZ AND BusinessAcceptsCreditCards:true");
+                Query rangeQuery = IntPoint.newRangeQuery("review_count",  20, 500);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("RestaurantsCounterService:true AND RestaurantsTakeOut: true AND Caters:false AND categories:restaurants");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                //HasTV:true AND RestaurantsGoodForGroups: true AND Alcohol: u'full_bar AND friday.closeTime: 2323 AND review_count: [50 TO 200]
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("HasTV:true AND RestaurantsGoodForGroups: true AND Alcohol: u'full_bar");
+                Query rangeQuery = IntPoint.newRangeQuery("friday.closeTime",  2323, 2323);
+                Query rangeQuery2 = IntPoint.newRangeQuery("review_count",  50, 200);
+                BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+                finalQuery.add(q, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery, BooleanClause.Occur.MUST);
+                finalQuery.add(rangeQuery2, BooleanClause.Occur.MUST);
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(finalQuery.build(), sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
+            }
+            return null;
+        });
+        list.add((Similarity sim) -> {
+            try {
+                Query q = new QueryParser("name", new WhitespaceAnalyzer()).parse("BusinessAcceptsBitcoin:true AND ByAppointmentOnly: true AND is_open:True");
+                return new Tuple<IndexType, TopDocs>(IndexType.Business,retriever.query(q, sim, IndexType.Business));
+            } catch (ParseException | IOException e) {
+                Assert.fail();
             }
             return null;
         });
@@ -121,14 +257,14 @@ public class QueryTests {
     public void testBooleanQuery() {
         int count = 1;
         logger.info("Testing Boolean Query");
-        for(Function<Similarity, TopDocs> s : buildQueries()) {
+        for(Function<Similarity, Tuple<IndexType, TopDocs>> s : buildQueries()) {
             long currentTime = System.nanoTime();
-            TopDocs result = s.apply(null);
+            Tuple<IndexType, TopDocs> result = s.apply(new BooleanSimilarity());
             logger.info("Query " + count + " Processing Time:" + ((System.nanoTime() - currentTime) / 1000000) + " milliseconds");
             count++;
-            Arrays.stream(result.scoreDocs).forEach(v -> {
+            Arrays.stream(result.y.scoreDocs).forEach(v -> {
                 try {
-                    Document doc = retriever.getSearcher(IndexType.Business).doc(v.doc);
+                    Document doc = retriever.getSearcher(result.x).doc(v.doc);
                     logger.info("Score:" + v.score + " " + ((IndexableField)doc.iterator().next()).name() + ": " + ((IndexableField)doc.iterator().next()).stringValue());
                 } catch (IOException e) {
                     logger.error("io fault", e);
@@ -141,15 +277,15 @@ public class QueryTests {
     @Test
     public void testRankingQuery() {
         int count = 1;
-        logger.info("Testing Ranking Query (BM25)");
-        for(Function<Similarity, TopDocs> s : buildQueries()) {
+        logger.info("Testing Ranking Query");
+        for(Function<Similarity, Tuple<IndexType, TopDocs>> s : buildQueries()) {
             long currentTime = System.nanoTime();
-            TopDocs result = s.apply(new BM25Similarity());
+            Tuple<IndexType, TopDocs> result = s.apply(null);
             logger.info("Query " + count + " Processing Time:" + ((System.nanoTime() - currentTime) / 1000000) + " milliseconds");
             count++;
-            Arrays.stream(result.scoreDocs).forEach(v -> {
+            Arrays.stream(result.y.scoreDocs).forEach(v -> {
                 try {
-                    Document doc = retriever.getSearcher(IndexType.Business).doc(v.doc);
+                    Document doc = retriever.getSearcher(result.x).doc(v.doc);
                     logger.info("Score:" + v.score + " " + ((IndexableField)doc.iterator().next()).name() + ": " + ((IndexableField)doc.iterator().next()).stringValue());
                 } catch (IOException e) {
                     logger.error("io fault", e);

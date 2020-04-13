@@ -1,37 +1,413 @@
-2020-04-13 09:36:18.153 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 1 name(top frequent word):BC contains 2 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 2 name(top frequent word):HI contains 1 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 3 name(top frequent word):TX contains 6 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 4 name(top frequent word):HPL contains 1 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 5 name(top frequent word):FL contains 3 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 6 name(top frequent word):NV contains 39084 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 7 name(top frequent word):WA contains 5 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 8 name(top frequent word):NY contains 22 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 9 name(top frequent word):SC contains 1328 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 10 name(top frequent word):QC contains 10233 docs
-2020-04-13 09:36:18.155 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 11 name(top frequent word):WI contains 5525 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 12 name(top frequent word):MB contains 1 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 13 name(top frequent word):OH contains 16392 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 14 name(top frequent word):GA contains 3 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 15 name(top frequent word):YT contains 1 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 16 name(top frequent word):MI contains 2 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 17 name(top frequent word):CA contains 23 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 18 name(top frequent word):ON contains 36627 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 19 name(top frequent word):UT contains 2 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 20 name(top frequent word):DUR contains 1 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 21 name(top frequent word):AB contains 8682 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 22 name(top frequent word):MO contains 1 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 23 name(top frequent word):IL contains 2034 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 24 name(top frequent word):OR contains 1 docs
-2020-04-13 09:36:18.156 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 25 name(top frequent word):AK contains 1 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 26 name(top frequent word):AL contains 3 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 27 name(top frequent word):VA contains 1 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 28 name(top frequent word):CO contains 2 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 29 name(top frequent word):DOW contains 1 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 30 name(top frequent word):PA contains 12376 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 31 name(top frequent word):AR contains 1 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 32 name(top frequent word):CT contains 2 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 33 name(top frequent word):NC contains 16218 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 34 name(top frequent word):NE contains 2 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 35 name(top frequent word):AZ contains 60803 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 36 name(top frequent word):XWY contains 1 docs
-2020-04-13 09:36:18.157 [main] INFO  Clustering.easyClustering.ClusterBuilder - Cluster 37 name(top frequent word):VT contains 2 docs
+2020-04-13 17:31:18.299 [main] INFO  Query.QueryTests - Testing Boolean Query
+2020-04-13 17:31:18.364 [main] INFO  Query.QueryTests - Query 1 Processing Time:60 milliseconds
+2020-04-13 17:31:18.377 [main] INFO  Query.QueryTests - Score:1.0 userId: h6sXm3sDJ4NuYY-cwFr_SA
+2020-04-13 17:31:18.377 [main] INFO  Query.QueryTests - Score:1.0 userId: -p2ISrtcOFS87T2pkyIaNw
+2020-04-13 17:31:18.378 [main] INFO  Query.QueryTests - Score:1.0 userId: FMLj4S6UEoSuj_bPQcER6w
+2020-04-13 17:31:18.378 [main] INFO  Query.QueryTests - Score:1.0 userId: lhhC5h8Z-Fbh9HtbweOETA
+2020-04-13 17:31:18.378 [main] INFO  Query.QueryTests - Score:1.0 userId: ql5cLAVAburs4jN_NQJWOg
+2020-04-13 17:31:18.378 [main] INFO  Query.QueryTests - Score:1.0 userId: IfSRhgASJe5Nxigd57o9Gg
+2020-04-13 17:31:18.378 [main] INFO  Query.QueryTests - Score:1.0 userId: CSn6ZZhOjLxVZZGmVlU_kw
+2020-04-13 17:31:18.378 [main] INFO  Query.QueryTests - Score:1.0 userId: FF0lNty7gIs3oPKKRqq56A
+2020-04-13 17:31:18.379 [main] INFO  Query.QueryTests - Score:1.0 userId: E66ZrWTNSRsNzvyhcmCjBg
+2020-04-13 17:31:18.379 [main] INFO  Query.QueryTests - Score:1.0 userId: lJ_vyOAE7cYptfQGf9EHzQ
+2020-04-13 17:31:18.394 [main] INFO  Query.QueryTests - Query 2 Processing Time:15 milliseconds
+2020-04-13 17:31:18.395 [main] INFO  Query.QueryTests - Score:2.0 business_id: jpaKaQsptwDbiqYcVdoNxA
+2020-04-13 17:31:18.403 [main] INFO  Query.QueryTests - Query 3 Processing Time:8 milliseconds
+2020-04-13 17:31:18.403 [main] INFO  Query.QueryTests - Score:1.0 reviewId: 8ySIRYVZ2cCmiPzATqrTJQ
+2020-04-13 17:31:18.403 [main] INFO  Query.QueryTests - Score:1.0 reviewId: 5urstiP2WLwkcMcReLDkOg
+2020-04-13 17:31:18.404 [main] INFO  Query.QueryTests - Score:1.0 reviewId: QVrAhjALbz761GHcxiKEhg
+2020-04-13 17:31:18.404 [main] INFO  Query.QueryTests - Score:1.0 reviewId: vKr5Dkj85REgVTofacu8gQ
+2020-04-13 17:31:18.404 [main] INFO  Query.QueryTests - Score:1.0 reviewId: tmlv0-SL6J48DvTEQqjPfw
+2020-04-13 17:31:18.404 [main] INFO  Query.QueryTests - Score:1.0 reviewId: fwh2s96WbGBXnNw7baBauA
+2020-04-13 17:31:18.404 [main] INFO  Query.QueryTests - Score:1.0 reviewId: KAF4do9wE-BAwAglvg5xQA
+2020-04-13 17:31:18.405 [main] INFO  Query.QueryTests - Score:1.0 reviewId: pEcfQPtcieomp0jV2k4bXw
+2020-04-13 17:31:18.405 [main] INFO  Query.QueryTests - Score:1.0 reviewId: U-Be4Y3H7M2yIKXJNm9qSQ
+2020-04-13 17:31:18.405 [main] INFO  Query.QueryTests - Score:1.0 reviewId: _6OOmzolADfwJxaZe1kwQw
+2020-04-13 17:31:18.411 [main] INFO  Query.QueryTests - Query 4 Processing Time:6 milliseconds
+2020-04-13 17:31:18.412 [main] INFO  Query.QueryTests - Score:3.0 business_id: cKyLV5oWZJ2NudWgqs8VZw
+2020-04-13 17:31:18.412 [main] INFO  Query.QueryTests - Score:3.0 business_id: ScYkbYNkDgCneBrD9vqhCQ
+2020-04-13 17:31:18.412 [main] INFO  Query.QueryTests - Score:3.0 business_id: 07cgbTbANYhVDfzTMOkB9w
+2020-04-13 17:31:18.412 [main] INFO  Query.QueryTests - Score:3.0 business_id: tF2ovXGBW6EeaPDWOxjpbg
+2020-04-13 17:31:18.413 [main] INFO  Query.QueryTests - Score:3.0 business_id: OUBuRQi7Doshp4bUzqAz2w
+2020-04-13 17:31:18.413 [main] INFO  Query.QueryTests - Score:3.0 business_id: tWAlwjRV195TX2X0Ihzciw
+2020-04-13 17:31:18.413 [main] INFO  Query.QueryTests - Score:3.0 business_id: 3Oya_jqC9Pe8Iz3zC_ztww
+2020-04-13 17:31:18.413 [main] INFO  Query.QueryTests - Score:3.0 business_id: 36sblIWe08niJxB2qu0I7g
+2020-04-13 17:31:18.413 [main] INFO  Query.QueryTests - Score:3.0 business_id: SEWXV8FPwtlSEPQdv-rMtw
+2020-04-13 17:31:18.414 [main] INFO  Query.QueryTests - Score:3.0 business_id: OZOasTrffkK0ZbF3j45yvw
+2020-04-13 17:31:18.434 [main] INFO  Query.QueryTests - Query 5 Processing Time:19 milliseconds
+2020-04-13 17:31:18.434 [main] INFO  Query.QueryTests - Score:2.0 business_id: pQeaRpvuhoEqudo3uymHIQ
+2020-04-13 17:31:18.435 [main] INFO  Query.QueryTests - Score:2.0 business_id: Ga2Bt7xfqoggTypWD5VpoQ
+2020-04-13 17:31:18.435 [main] INFO  Query.QueryTests - Score:2.0 business_id: Sd75ucXKoZUM2BEfBHFUOg
+2020-04-13 17:31:18.435 [main] INFO  Query.QueryTests - Score:2.0 business_id: ZkzutF0P_u0C0yTulwaHkA
+2020-04-13 17:31:18.436 [main] INFO  Query.QueryTests - Score:2.0 business_id: j9bWpCRwpDVfwVT_V85qeA
+2020-04-13 17:31:18.436 [main] INFO  Query.QueryTests - Score:2.0 business_id: 6GHwgKNlvfIMUpFaxgBjUA
+2020-04-13 17:31:18.437 [main] INFO  Query.QueryTests - Score:2.0 business_id: Ir_QIzs-4o9ElOtiGuxJrw
+2020-04-13 17:31:18.437 [main] INFO  Query.QueryTests - Score:2.0 business_id: 39lLJK_rrYY2NYomSsQdUA
+2020-04-13 17:31:18.437 [main] INFO  Query.QueryTests - Score:2.0 business_id: 0y6alZmSLnPzmG5_kP5Quw
+2020-04-13 17:31:18.437 [main] INFO  Query.QueryTests - Score:2.0 business_id: 5X7TQsA3iDbBc8yy2YkCnA
+2020-04-13 17:31:18.440 [main] INFO  Query.QueryTests - Query 6 Processing Time:2 milliseconds
+2020-04-13 17:31:18.440 [main] INFO  Query.QueryTests - Score:3.0 business_id: Q_dh08clYUPj13GmCRzIVA
+2020-04-13 17:31:18.440 [main] INFO  Query.QueryTests - Score:3.0 business_id: Yr_w9lakJrKMyEG_hI6zbA
+2020-04-13 17:31:18.440 [main] INFO  Query.QueryTests - Score:3.0 business_id: AtD6B83S4Mbmq0t7iDnUVA
+2020-04-13 17:31:18.441 [main] INFO  Query.QueryTests - Score:3.0 business_id: oUX2bYbqjqST-urKbOHG6w
+2020-04-13 17:31:18.441 [main] INFO  Query.QueryTests - Score:3.0 business_id: c1JoHp602zilpDU_57DsMg
+2020-04-13 17:31:18.441 [main] INFO  Query.QueryTests - Score:3.0 business_id: tZEW8ESjrVmNGXvPnrR97w
+2020-04-13 17:31:18.442 [main] INFO  Query.QueryTests - Score:3.0 business_id: THOZYeKWKyW_-6U30E1b5w
+2020-04-13 17:31:18.442 [main] INFO  Query.QueryTests - Score:3.0 business_id: q3YnYPjLuBGRDi_59yTC5g
+2020-04-13 17:31:18.442 [main] INFO  Query.QueryTests - Score:3.0 business_id: f1L-fI_wM5aH7_YG7WcUaA
+2020-04-13 17:31:18.442 [main] INFO  Query.QueryTests - Score:3.0 business_id: nvh-zGYHKwIUiPTgwhIScA
+2020-04-13 17:31:18.446 [main] INFO  Query.QueryTests - Query 7 Processing Time:3 milliseconds
+2020-04-13 17:31:18.446 [main] INFO  Query.QueryTests - Score:3.0 business_id: pzqkoAemPvIOim95gZ9_UQ
+2020-04-13 17:31:18.446 [main] INFO  Query.QueryTests - Score:3.0 business_id: 65kVhqEhte8C6-HDq564Kw
+2020-04-13 17:31:18.446 [main] INFO  Query.QueryTests - Score:3.0 business_id: G5nbw153N1Ca0PDENesUvw
+2020-04-13 17:31:18.447 [main] INFO  Query.QueryTests - Score:3.0 business_id: 4g2KxIaa3TcuYgSCDG8_sQ
+2020-04-13 17:31:18.447 [main] INFO  Query.QueryTests - Score:3.0 business_id: yxyWqmJdEVZpPNRIk8s_Cg
+2020-04-13 17:31:18.447 [main] INFO  Query.QueryTests - Score:3.0 business_id: TleEfK2ks-gQ8mT-hCrU8A
+2020-04-13 17:31:18.448 [main] INFO  Query.QueryTests - Score:3.0 business_id: 1TZ1AGd22wIchtsWkTeG5Q
+2020-04-13 17:31:18.448 [main] INFO  Query.QueryTests - Score:3.0 business_id: Zx6sZyhaW583ik9gHAFzGg
+2020-04-13 17:31:18.448 [main] INFO  Query.QueryTests - Score:3.0 business_id: s1JMK5xZnkJ141FX7ks1Yw
+2020-04-13 17:31:18.448 [main] INFO  Query.QueryTests - Score:3.0 business_id: iapGn_rIfAT3F1z4TrjEsQ
+2020-04-13 17:31:18.450 [main] INFO  Query.QueryTests - Query 8 Processing Time:1 milliseconds
+2020-04-13 17:31:18.450 [main] INFO  Query.QueryTests - Score:3.0 business_id: Ya-HZZrzMWYSBtGyLajDQg
+2020-04-13 17:31:18.450 [main] INFO  Query.QueryTests - Score:3.0 business_id: Uz77JHl5e6zlGa-71-6_dA
+2020-04-13 17:31:18.450 [main] INFO  Query.QueryTests - Score:3.0 business_id: f5Pg89x-2xek78E9KHMhNg
+2020-04-13 17:31:18.451 [main] INFO  Query.QueryTests - Score:3.0 business_id: sY2TrIpQaS8kFDI8GRGS3Q
+2020-04-13 17:31:18.451 [main] INFO  Query.QueryTests - Score:3.0 business_id: LbM7p-cI0dUCkaUzOyFMTw
+2020-04-13 17:31:18.451 [main] INFO  Query.QueryTests - Score:3.0 business_id: 0oyzNutZ--rBqP_boeegPg
+2020-04-13 17:31:18.451 [main] INFO  Query.QueryTests - Score:3.0 business_id: BmZu5ackYYCrgQIaJ3-r9A
+2020-04-13 17:31:18.452 [main] INFO  Query.QueryTests - Score:3.0 business_id: jH19V2I9fIslnNhDzPmdkA
+2020-04-13 17:31:18.452 [main] INFO  Query.QueryTests - Score:3.0 business_id: 6ipr7nnwrzf_o3MGD-8nlA
+2020-04-13 17:31:18.459 [main] INFO  Query.QueryTests - Query 9 Processing Time:6 milliseconds
+2020-04-13 17:31:18.459 [main] INFO  Query.QueryTests - Score:3.0 business_id: 04hacnUYlCiUprno4UuPtw
+2020-04-13 17:31:18.459 [main] INFO  Query.QueryTests - Score:3.0 business_id: izw7OBVSeNmlVhjly1amQg
+2020-04-13 17:31:18.460 [main] INFO  Query.QueryTests - Score:3.0 business_id: B_wz5DFPuYBLedrk8XW6jA
+2020-04-13 17:31:18.460 [main] INFO  Query.QueryTests - Score:3.0 business_id: RqwuaHAybTqbkmGe1RZLXQ
+2020-04-13 17:31:18.460 [main] INFO  Query.QueryTests - Score:3.0 business_id: BAnkejp9fakD_S8AQBGG5Q
+2020-04-13 17:31:18.461 [main] INFO  Query.QueryTests - Score:3.0 business_id: KOoAdq_lPyXLdv1GTcO-MA
+2020-04-13 17:31:18.461 [main] INFO  Query.QueryTests - Score:3.0 business_id: 9eK8T1EUoCuzjsrtNa522A
+2020-04-13 17:31:18.461 [main] INFO  Query.QueryTests - Score:3.0 business_id: YLCYckhafr1SzmDLNoLZvg
+2020-04-13 17:31:18.462 [main] INFO  Query.QueryTests - Score:3.0 business_id: 2kN3it1GhPQeC4SNYiV3Lg
+2020-04-13 17:31:18.462 [main] INFO  Query.QueryTests - Score:3.0 business_id: KVGgdv6bZ1GCNIZOY0SPag
+2020-04-13 17:31:18.465 [main] INFO  Query.QueryTests - Query 10 Processing Time:2 milliseconds
+2020-04-13 17:31:18.465 [main] INFO  Query.QueryTests - Score:3.0 business_id: vjTVxnsQEZ34XjYNS-XUpA
+2020-04-13 17:31:18.466 [main] INFO  Query.QueryTests - Score:3.0 business_id: fnZrZlqW1Z8iWgTVDfv_MA
+2020-04-13 17:31:18.466 [main] INFO  Query.QueryTests - Score:3.0 business_id: -qjn24n8HYF6It9GQrQntw
+2020-04-13 17:31:18.466 [main] INFO  Query.QueryTests - Score:3.0 business_id: 7j0kor_fkeYhyEpXh4OpnQ
+2020-04-13 17:31:18.466 [main] INFO  Query.QueryTests - Score:3.0 business_id: j9bWpCRwpDVfwVT_V85qeA
+2020-04-13 17:31:18.467 [main] INFO  Query.QueryTests - Score:3.0 business_id: W7hCuNdn2gzehta6eSHzgQ
+2020-04-13 17:31:18.467 [main] INFO  Query.QueryTests - Score:3.0 business_id: 8nP8ghEpT6WFcM6tfqAaGA
+2020-04-13 17:31:18.467 [main] INFO  Query.QueryTests - Score:3.0 business_id: 0y6alZmSLnPzmG5_kP5Quw
+2020-04-13 17:31:18.467 [main] INFO  Query.QueryTests - Score:3.0 business_id: 3C0bnFhjkgYP9mWORKg6cA
+2020-04-13 17:31:18.468 [main] INFO  Query.QueryTests - Score:3.0 business_id: 5X7TQsA3iDbBc8yy2YkCnA
+2020-04-13 17:31:18.482 [main] INFO  Query.QueryTests - Query 11 Processing Time:14 milliseconds
+2020-04-13 17:31:18.483 [main] INFO  Query.QueryTests - Score:3.0 business_id: OWkS1FXNJbozn-qPg3LWxg
+2020-04-13 17:31:18.483 [main] INFO  Query.QueryTests - Score:3.0 business_id: Q4AWWdBWe_ojYX1a4ffXFQ
+2020-04-13 17:31:18.483 [main] INFO  Query.QueryTests - Score:3.0 business_id: UT6L3b7Zll_nvRidijiDSA
+2020-04-13 17:31:18.483 [main] INFO  Query.QueryTests - Score:3.0 business_id: rcaPajgKOJC2vo_l3xa42A
+2020-04-13 17:31:18.484 [main] INFO  Query.QueryTests - Score:3.0 business_id: lmxA0dJM0XsPCIHPXhEQ-g
+2020-04-13 17:31:18.484 [main] INFO  Query.QueryTests - Score:3.0 business_id: BvV9SSaQhC4fvpC3XyQjjA
+2020-04-13 17:31:18.484 [main] INFO  Query.QueryTests - Score:3.0 business_id: FUfANPwFtAyzVf3zF1SU5w
+2020-04-13 17:31:18.484 [main] INFO  Query.QueryTests - Score:3.0 business_id: U4ncU-YfIipnTetJDZLGlw
+2020-04-13 17:31:18.485 [main] INFO  Query.QueryTests - Score:3.0 business_id: nnDLapJk1z2NJE0-XzwMlQ
+2020-04-13 17:31:18.485 [main] INFO  Query.QueryTests - Score:3.0 business_id: WTt8_zwy4IXaB2QnuiQP1Q
+2020-04-13 17:31:18.488 [main] INFO  Query.QueryTests - Query 12 Processing Time:2 milliseconds
+2020-04-13 17:31:18.488 [main] INFO  Query.QueryTests - Score:3.0 business_id: a_E-rLe2zcyX-X4FKhWWRg
+2020-04-13 17:31:18.488 [main] INFO  Query.QueryTests - Score:3.0 business_id: ccQhq9pSd_5wj1yMwiM7iA
+2020-04-13 17:31:18.488 [main] INFO  Query.QueryTests - Score:3.0 business_id: Hgy5MrIKrwRJDXnwKaCpbA
+2020-04-13 17:31:18.488 [main] INFO  Query.QueryTests - Score:3.0 business_id: MM572Htt9k_e96IKNyCEtA
+2020-04-13 17:31:18.488 [main] INFO  Query.QueryTests - Score:3.0 business_id: c7JoAt6a3Ufkpn3TrGU23A
+2020-04-13 17:31:18.489 [main] INFO  Query.QueryTests - Score:3.0 business_id: ERM603jbIbNqX2c7Ww1Qiw
+2020-04-13 17:31:18.489 [main] INFO  Query.QueryTests - Score:3.0 business_id: jk-eI5_D63zK-WGeWqsOHg
+2020-04-13 17:31:18.489 [main] INFO  Query.QueryTests - Score:3.0 business_id: IghwtXL8ZgK2dEL62Pzhrw
+2020-04-13 17:31:18.489 [main] INFO  Query.QueryTests - Score:3.0 business_id: jlviy68buL1X2UADI-Lnlw
+2020-04-13 17:31:18.489 [main] INFO  Query.QueryTests - Score:3.0 business_id: Ns20WGWn6s6niKAGIQB4UQ
+2020-04-13 17:31:18.512 [main] INFO  Query.QueryTests - Query 13 Processing Time:22 milliseconds
+2020-04-13 17:31:18.512 [main] INFO  Query.QueryTests - Score:2.0 business_id: pQeaRpvuhoEqudo3uymHIQ
+2020-04-13 17:31:18.512 [main] INFO  Query.QueryTests - Score:2.0 business_id: CsLQLiRoafpJPJSkNX2h5Q
+2020-04-13 17:31:18.512 [main] INFO  Query.QueryTests - Score:2.0 business_id: vjTVxnsQEZ34XjYNS-XUpA
+2020-04-13 17:31:18.512 [main] INFO  Query.QueryTests - Score:2.0 business_id: fnZrZlqW1Z8iWgTVDfv_MA
+2020-04-13 17:31:18.512 [main] INFO  Query.QueryTests - Score:2.0 business_id: rVBPQdeayMYht4Uv_FOLHg
+2020-04-13 17:31:18.513 [main] INFO  Query.QueryTests - Score:2.0 business_id: fhNf_sg-XzZ3e7HEVGuOZg
+2020-04-13 17:31:18.513 [main] INFO  Query.QueryTests - Score:2.0 business_id: LoRef3ChgZKbxUio-sHgQg
+2020-04-13 17:31:18.513 [main] INFO  Query.QueryTests - Score:2.0 business_id: Ga2Bt7xfqoggTypWD5VpoQ
+2020-04-13 17:31:18.513 [main] INFO  Query.QueryTests - Score:2.0 business_id: xFc50drSPxXkcLvX5ygqrg
+2020-04-13 17:31:18.513 [main] INFO  Query.QueryTests - Score:2.0 business_id: tLpkSwdtqqoXwU0JAGnApw
+2020-04-13 17:31:18.516 [main] INFO  Query.QueryTests - Query 14 Processing Time:2 milliseconds
+2020-04-13 17:31:18.516 [main] INFO  Query.QueryTests - Score:3.0 business_id: OcCsO9gyNkojXdQs086Urg
+2020-04-13 17:31:18.516 [main] INFO  Query.QueryTests - Score:3.0 business_id: SsJAn_JvZC4cbAg_eHUGpw
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: 42DvUONuqa1mC1YbnZ0o0w
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: OvR4X_qSjkgpHdNn9w7GrQ
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: VL2C7v0Kq8ZlMQd_Wh3X3Q
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: rbbcyLXhGzIr0j4XNLdayw
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: RRTAFcRPmlLaYIDGDS7gPA
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: hWIQ6rl1uub-WVGTySvOsw
+2020-04-13 17:31:18.517 [main] INFO  Query.QueryTests - Score:3.0 business_id: n3ry8GxT_Atov6GAIzRGKQ
+2020-04-13 17:31:18.518 [main] INFO  Query.QueryTests - Score:3.0 business_id: gvCW53iarF1eG030zSKuRA
+2020-04-13 17:31:18.524 [main] INFO  Query.QueryTests - Query 15 Processing Time:6 milliseconds
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: FrMRHhzT-qUzv1-Nh1IOjQ
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: vadTcg3fvqiXj0Bh9Lv3zg
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: 37f9w8jmMwa_QQ9GDjs7hg
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: pELYR3hDc20IwzzR-ZTcTA
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: ci3xUs8ZffvGhWfoioAL0Q
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: rZUK25ho_Wmgv5tRAs7LMA
+2020-04-13 17:31:18.525 [main] INFO  Query.QueryTests - Score:4.0 business_id: vchjO0Vs5FwW2tpFnCimqg
+2020-04-13 17:31:18.526 [main] INFO  Query.QueryTests - Score:4.0 business_id: WJVDUT13ZpB698C8VN6tww
+2020-04-13 17:31:18.526 [main] INFO  Query.QueryTests - Score:4.0 business_id: OippW8-KgpIfH6C_tP4Sog
+2020-04-13 17:31:18.526 [main] INFO  Query.QueryTests - Score:4.0 business_id: 24S-aiManGfjbb-fwwi2VQ
+2020-04-13 17:31:18.531 [main] INFO  Query.QueryTests - Query 16 Processing Time:5 milliseconds
+2020-04-13 17:31:18.532 [main] INFO  Query.QueryTests - Score:3.0 business_id: iWxv5qyiMEhuiUozY6limg
+2020-04-13 17:31:18.532 [main] INFO  Query.QueryTests - Score:3.0 business_id: iWL7uxIpLvkFm3Jv8Humuw
+2020-04-13 17:31:18.532 [main] INFO  Query.QueryTests - Score:3.0 business_id: g0yeRwvJmdd-XrH9lye0ww
+2020-04-13 17:31:18.532 [main] INFO  Query.QueryTests - Score:3.0 business_id: upZ9FEpOh1Pr_GY-rUh0vw
+2020-04-13 17:31:18.532 [main] INFO  Query.QueryTests - Score:3.0 business_id: v3gSujyy-PB8q9pSqot2Rg
+2020-04-13 17:31:18.532 [main] INFO  Query.QueryTests - Score:3.0 business_id: IgZr5wCW4gZo51dOEiyNVw
+2020-04-13 17:31:18.533 [main] INFO  Query.QueryTests - Score:3.0 business_id: wJK311GrpDS9KSaPdz27hQ
+2020-04-13 17:31:18.533 [main] INFO  Query.QueryTests - Score:3.0 business_id: KMIGb4GJ6BcksShOdmneWA
+2020-04-13 17:31:18.533 [main] INFO  Query.QueryTests - Score:3.0 business_id: 5UgSHCX-V0iXagxUZ9LEXg
+2020-04-13 17:31:18.533 [main] INFO  Query.QueryTests - Score:3.0 business_id: 5jFAsP4xlu8M2ew7qMTNVQ
+2020-04-13 17:31:18.544 [main] INFO  Query.QueryTests - Query 17 Processing Time:10 milliseconds
+2020-04-13 17:31:18.544 [main] INFO  Query.QueryTests - Score:4.0 business_id: 1TLZtAkDMnCvTyE4wmGWYg
+2020-04-13 17:31:18.544 [main] INFO  Query.QueryTests - Score:4.0 business_id: 26hQy2RMyhYxjzmlE_dNeQ
+2020-04-13 17:31:18.544 [main] INFO  Query.QueryTests - Score:4.0 business_id: AbQ5w5RWojGGblGRkdOxtw
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: _G8bMhEbhTvDJ9jXH2jCNQ
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: WsniwUYe-Xvb1mpskJttaA
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: C72oYowwfN5dHnzfa_NlDg
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: Ihz6oArpfWYP6FyycbOQqA
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: VbeBUCFZ2Amnf9E1A0BvGg
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: ZlYjeK5S9hw1bP3nLezD6Q
+2020-04-13 17:31:18.545 [main] INFO  Query.QueryTests - Score:4.0 business_id: pzqkoAemPvIOim95gZ9_UQ
+2020-04-13 17:31:18.547 [main] INFO  Query.QueryTests - Query 18 Processing Time:1 milliseconds
+2020-04-13 17:31:18.548 [main] INFO  Query.QueryTests - Score:4.0 business_id: qABb9Wzdn51VcNHdp_Qhpg
+2020-04-13 17:31:18.548 [main] INFO  Query.QueryTests - Score:4.0 business_id: apdb7MGnmnx6nGWBJ0ch_g
+2020-04-13 17:31:18.548 [main] INFO  Query.QueryTests - Score:4.0 business_id: macHk8_6D11iBp2HlbhFLg
+2020-04-13 17:31:18.548 [main] INFO  Query.QueryTests - Score:4.0 business_id: xZtKQ6AFLh9P7rfmjvVjhw
+2020-04-13 17:31:18.548 [main] INFO  Query.QueryTests - Score:4.0 business_id: N4AIlY5runouWKCMurrnvQ
+2020-04-13 17:31:18.558 [main] INFO  Query.QueryTests - Query 19 Processing Time:10 milliseconds
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: D-RQsQjEVI_w-KC7iDJd5Q
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: Ra5fI9BEAuWWaLJSfkiCiQ
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: wiPtQK7_QAkUUMQtyiaUNg
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: XSY26vVt9qvLh3SAECPzkg
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: sSEeW-U4N5TxalS58zuGrA
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: 6r2f7qd5NZBv1cLOzRVxKA
+2020-04-13 17:31:18.559 [main] INFO  Query.QueryTests - Score:5.0 business_id: u6JJojkbqVlVI4NqKsL54Q
+2020-04-13 17:31:18.560 [main] INFO  Query.QueryTests - Score:5.0 business_id: ATeOjZzE3VOI-RW7FUFJpQ
+2020-04-13 17:31:18.560 [main] INFO  Query.QueryTests - Score:5.0 business_id: WJVDUT13ZpB698C8VN6tww
+2020-04-13 17:31:18.560 [main] INFO  Query.QueryTests - Score:5.0 business_id: vtGwb-yl69LT96mHVllWeA
+2020-04-13 17:31:18.563 [main] INFO  Query.QueryTests - Query 20 Processing Time:3 milliseconds
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: feBEmxRAzUW4zgCLtxzhPQ
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: 2RjQN_KV8Yv4vuTzruuL9g
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: Z1YaY_qnupcsiGMGyh1zOA
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: cv8iMGIBtawW_4Imq8qPjw
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: ToC5TBp85mILzdaco-Ttpw
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: 0_rWCynqnCcmHKrEt6qi8Q
+2020-04-13 17:31:18.564 [main] INFO  Query.QueryTests - Score:3.0 business_id: -raRJtfpxvBFYTCxhIkGzg
+2020-04-13 17:31:18.565 [main] INFO  Query.QueryTests - Score:3.0 business_id: weIPRz9k778J_jt8muBkdQ
+2020-04-13 17:31:18.565 [main] INFO  Query.QueryTests - Score:3.0 business_id: DRH2DRochKr7_sY2YOc2GA
+2020-04-13 17:31:18.565 [main] INFO  Query.QueryTests - Score:3.0 business_id: tdzRCSV_Ym3MgftaZZ3y9g
+2020-04-13 17:31:18.565 [main] INFO  Query.QueryTests - ================================================================================================
+2020-04-13 17:31:18.660 [main] INFO  Query.QueryTests - Testing Ranking Query
+2020-04-13 17:31:18.663 [main] INFO  Query.QueryTests - Query 1 Processing Time:2 milliseconds
+2020-04-13 17:31:18.664 [main] INFO  Query.QueryTests - Score:1.2905786 userId: h6sXm3sDJ4NuYY-cwFr_SA
+2020-04-13 17:31:18.664 [main] INFO  Query.QueryTests - Score:1.2905786 userId: -p2ISrtcOFS87T2pkyIaNw
+2020-04-13 17:31:18.664 [main] INFO  Query.QueryTests - Score:1.2905786 userId: FMLj4S6UEoSuj_bPQcER6w
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: lhhC5h8Z-Fbh9HtbweOETA
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: ql5cLAVAburs4jN_NQJWOg
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: IfSRhgASJe5Nxigd57o9Gg
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: CSn6ZZhOjLxVZZGmVlU_kw
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: FF0lNty7gIs3oPKKRqq56A
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: E66ZrWTNSRsNzvyhcmCjBg
+2020-04-13 17:31:18.665 [main] INFO  Query.QueryTests - Score:1.2905786 userId: lJ_vyOAE7cYptfQGf9EHzQ
+2020-04-13 17:31:18.667 [main] INFO  Query.QueryTests - Query 2 Processing Time:1 milliseconds
+2020-04-13 17:31:18.667 [main] INFO  Query.QueryTests - Score:5.073532 business_id: jpaKaQsptwDbiqYcVdoNxA
+2020-04-13 17:31:18.671 [main] INFO  Query.QueryTests - Query 3 Processing Time:3 milliseconds
+2020-04-13 17:31:18.671 [main] INFO  Query.QueryTests - Score:2.1061409 reviewId: PUK3PhZy5Wu00LzIfamEbA
+2020-04-13 17:31:18.671 [main] INFO  Query.QueryTests - Score:2.0399907 reviewId: 02hSJL3BNlNoyvDMWCbDbQ
+2020-04-13 17:31:18.671 [main] INFO  Query.QueryTests - Score:2.0289164 reviewId: 1lvNHV5fj_1pe9K4-Ps4Pg
+2020-04-13 17:31:18.671 [main] INFO  Query.QueryTests - Score:2.0288124 reviewId: 9S_wmgNvBRXOz9zNM2_Haw
+2020-04-13 17:31:18.672 [main] INFO  Query.QueryTests - Score:2.0250254 reviewId: ofVhJ1GIBwVx00HERqULyw
+2020-04-13 17:31:18.672 [main] INFO  Query.QueryTests - Score:2.0196035 reviewId: OzZdxR259AQ-rEtFmRdtSQ
+2020-04-13 17:31:18.672 [main] INFO  Query.QueryTests - Score:2.0196035 reviewId: qTgtuLK8QxDO3cfdzZFN-Q
+2020-04-13 17:31:18.672 [main] INFO  Query.QueryTests - Score:2.0165522 reviewId: 9UfDFpoAu2-f9McfyTSLRg
+2020-04-13 17:31:18.672 [main] INFO  Query.QueryTests - Score:2.0135102 reviewId: 7F18mJYfVhT1yvfXAmFlfQ
+2020-04-13 17:31:18.672 [main] INFO  Query.QueryTests - Score:2.011445 reviewId: HzT7m_NofbpleKBZkq3o2Q
+2020-04-13 17:31:18.676 [main] INFO  Query.QueryTests - Query 4 Processing Time:3 milliseconds
+2020-04-13 17:31:18.676 [main] INFO  Query.QueryTests - Score:2.4410782 business_id: ru2SbGVxc_IGCRMcI3AzAw
+2020-04-13 17:31:18.676 [main] INFO  Query.QueryTests - Score:2.4410782 business_id: LuYiqAw3twrVr0QppxN77Q
+2020-04-13 17:31:18.676 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: 2MobGC3_6ddsY0KA8yENrw
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: njH7MH60P0-F7i-WyAUbhg
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: MX_z-X3uBnWSsjSZ5V1oEw
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: 0KkCZIZ7LFuPqtaoVWvA4Q
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: nrcJJzJH4qdh5Glo8rdKNg
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: 7bNqZ5NwTnL8upkRkJ-uuA
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: OM5qh56is-vbWJOsT9V_uQ
+2020-04-13 17:31:18.677 [main] INFO  Query.QueryTests - Score:2.2850175 business_id: DuNqApk82hjSeF2bJtlZtg
+2020-04-13 17:31:18.684 [main] INFO  Query.QueryTests - Query 5 Processing Time:7 milliseconds
+2020-04-13 17:31:18.685 [main] INFO  Query.QueryTests - Score:2.3929925 business_id: AsKb-lUO_3MYFg6df9QTsw
+2020-04-13 17:31:18.685 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: ZkzutF0P_u0C0yTulwaHkA
+2020-04-13 17:31:18.685 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: JQWIZ8MT-VGZzO5W5XCB5Q
+2020-04-13 17:31:18.685 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: 0C38ezzbBX-dWxpnnwYAzg
+2020-04-13 17:31:18.685 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: s6L6SdVYhPcOQEDmNIg1-g
+2020-04-13 17:31:18.685 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: 6iqN2D0Dp_9_i-GD2l2s2Q
+2020-04-13 17:31:18.686 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: jItwkDeMBFquEb7mAvW-Dw
+2020-04-13 17:31:18.686 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: oz-U184llqjVIt398hLntQ
+2020-04-13 17:31:18.686 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: 7gIK3en6jVyiColBvlHNPA
+2020-04-13 17:31:18.686 [main] INFO  Query.QueryTests - Score:2.3233483 business_id: Vw9u6qar1I2QlkQOV6KNVA
+2020-04-13 17:31:18.691 [main] INFO  Query.QueryTests - Query 6 Processing Time:4 milliseconds
+2020-04-13 17:31:18.691 [main] INFO  Query.QueryTests - Score:2.0364308 business_id: lYlVsbhDrglWDdhh7OTM2w
+2020-04-13 17:31:18.691 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: kUntNQ5P9IrRzEoHdRxV-w
+2020-04-13 17:31:18.691 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: TspQ9jCczz436RiJHJQYZw
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: bwmO8teAlvjmuIDxhPb44g
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: oGYXSVs0ympLy0ur8Qnp7g
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: PhrTUiNQVA_XsK43O2TA5w
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: s6L6SdVYhPcOQEDmNIg1-g
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: 8F-UdXe_YylX3k0L1SEiRg
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: Rf41BVuBNLsSWbCla28Tig
+2020-04-13 17:31:18.692 [main] INFO  Query.QueryTests - Score:1.9667869 business_id: KMKPusWbBaIORB669W0EeQ
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Query 7 Processing Time:2 milliseconds
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.8361955 business_id: nso6KokcgCVIeVLcSvtQaw
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.8361955 business_id: w2vf-Jl06ljoeJzWOJZztw
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.8361955 business_id: aOkK_2XXQClf5UYYSET__g
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.8361955 business_id: zHl4NP1D37x3x4tHMNL0vg
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.8361955 business_id: GJ78keDoPgWenKshmPpwzg
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.8361955 business_id: R0wHcOhS9eKkE0KrBmxkxw
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.6903386 business_id: Zx6sZyhaW583ik9gHAFzGg
+2020-04-13 17:31:18.695 [main] INFO  Query.QueryTests - Score:2.6903386 business_id: NqkMvCMkrccjtOjc0y4bMg
+2020-04-13 17:31:18.696 [main] INFO  Query.QueryTests - Score:2.6903386 business_id: sln1MNbYi6LLT5lIlM5prQ
+2020-04-13 17:31:18.696 [main] INFO  Query.QueryTests - Score:2.6903386 business_id: iVjCTKRBo786wAr_T-cJjQ
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Query 8 Processing Time:1 milliseconds
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Score:5.0066547 business_id: sY2TrIpQaS8kFDI8GRGS3Q
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Score:5.0066547 business_id: 6ipr7nnwrzf_o3MGD-8nlA
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Score:4.853919 business_id: Uz77JHl5e6zlGa-71-6_dA
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Score:4.8158383 business_id: f5Pg89x-2xek78E9KHMhNg
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Score:4.7822714 business_id: LbM7p-cI0dUCkaUzOyFMTw
+2020-04-13 17:31:18.697 [main] INFO  Query.QueryTests - Score:4.7822714 business_id: BmZu5ackYYCrgQIaJ3-r9A
+2020-04-13 17:31:18.698 [main] INFO  Query.QueryTests - Score:4.7822714 business_id: jH19V2I9fIslnNhDzPmdkA
+2020-04-13 17:31:18.698 [main] INFO  Query.QueryTests - Score:4.7524614 business_id: 0oyzNutZ--rBqP_boeegPg
+2020-04-13 17:31:18.698 [main] INFO  Query.QueryTests - Score:4.596941 business_id: Ya-HZZrzMWYSBtGyLajDQg
+2020-04-13 17:31:18.705 [main] INFO  Query.QueryTests - Query 9 Processing Time:6 milliseconds
+2020-04-13 17:31:18.705 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: YLCYckhafr1SzmDLNoLZvg
+2020-04-13 17:31:18.705 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: 2kN3it1GhPQeC4SNYiV3Lg
+2020-04-13 17:31:18.705 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: tzlm9Im_8h144lDuIi4o1Q
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: U0hhhP0ATUqchbVi9tlHdg
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: SoaONMxCRo_DA-9SLkHRQQ
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: eA-1RKbJ3JccVd_O0AGIfg
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: DWcNLMwnhZlbP-I7YsBT8g
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: 28wbO7znGRmBFNswTqaVFQ
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: W2rmrEJnMsA2jlRE0ymDpA
+2020-04-13 17:31:18.706 [main] INFO  Query.QueryTests - Score:3.1693232 business_id: NR8mpVgvVo5GBa-hDMt3LQ
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Query 10 Processing Time:3 milliseconds
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: vjTVxnsQEZ34XjYNS-XUpA
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: fnZrZlqW1Z8iWgTVDfv_MA
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: -qjn24n8HYF6It9GQrQntw
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: 7j0kor_fkeYhyEpXh4OpnQ
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: j9bWpCRwpDVfwVT_V85qeA
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: W7hCuNdn2gzehta6eSHzgQ
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: 8nP8ghEpT6WFcM6tfqAaGA
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: 0y6alZmSLnPzmG5_kP5Quw
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: 3C0bnFhjkgYP9mWORKg6cA
+2020-04-13 17:31:18.710 [main] INFO  Query.QueryTests - Score:0.71534806 business_id: 5X7TQsA3iDbBc8yy2YkCnA
+2020-04-13 17:31:18.716 [main] INFO  Query.QueryTests - Query 11 Processing Time:5 milliseconds
+2020-04-13 17:31:18.716 [main] INFO  Query.QueryTests - Score:3.631606 business_id: UT6L3b7Zll_nvRidijiDSA
+2020-04-13 17:31:18.716 [main] INFO  Query.QueryTests - Score:3.631606 business_id: FUfANPwFtAyzVf3zF1SU5w
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: nnDLapJk1z2NJE0-XzwMlQ
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: 3nf-a84p8LC41_WAIvJPjg
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: XnJeadLrlj9AZB8qSdIR2Q
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: Oz1Ci9y2MnwYyAjVsoZg5Q
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: v0fAQRGaDUls8pOh5i6M4A
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: rtlsfmdufArhk-47sWIf2w
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: qsbmEyNqGPQJvdMzoSBmmg
+2020-04-13 17:31:18.717 [main] INFO  Query.QueryTests - Score:3.631606 business_id: RPf0xTug-hAHOdrHb7eEJA
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Query 12 Processing Time:2 milliseconds
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.6028388 business_id: 3X-jhrbCSMv5hfUS02xdHA
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.6028388 business_id: xj3Wk4QXwSNHdOSbZyuqBw
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.6028388 business_id: 46hnat0aLao-qYWZkN9aBg
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.6028388 business_id: N-tpz2XtAPreL5wnFjKGwA
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.4965608 business_id: RAJ8DFyJxG7O1RpyyJTOlg
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.4965608 business_id: AZdivItCJCjjc_H72dQLMA
+2020-04-13 17:31:18.720 [main] INFO  Query.QueryTests - Score:3.468601 business_id: a_E-rLe2zcyX-X4FKhWWRg
+2020-04-13 17:31:18.721 [main] INFO  Query.QueryTests - Score:3.468601 business_id: ccQhq9pSd_5wj1yMwiM7iA
+2020-04-13 17:31:18.721 [main] INFO  Query.QueryTests - Score:3.468601 business_id: Hgy5MrIKrwRJDXnwKaCpbA
+2020-04-13 17:31:18.721 [main] INFO  Query.QueryTests - Score:3.468601 business_id: c7JoAt6a3Ufkpn3TrGU23A
+2020-04-13 17:31:18.757 [main] INFO  Query.QueryTests - Query 13 Processing Time:36 milliseconds
+2020-04-13 17:31:18.757 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: 0v7DIprUj2KASqg5PwqhUg
+2020-04-13 17:31:18.757 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: _7bPSTUk_FZvomYjawpdhA
+2020-04-13 17:31:18.757 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: Gn68S8dMawWtjaiNNAHQbQ
+2020-04-13 17:31:18.757 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: j5wcbhFqxEF-YtayK2fTjQ
+2020-04-13 17:31:18.757 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: KLJmSYpq81fy0gXri-tAAw
+2020-04-13 17:31:18.758 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: tiaSRKBTb7edKIB4V5qFKg
+2020-04-13 17:31:18.758 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: RUyvZomtYaAU4Ryrp1-lJg
+2020-04-13 17:31:18.758 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: RSFB2aWr7Spel0gVJWvuPA
+2020-04-13 17:31:18.758 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: LHueU8OxZ6ObtISJ18niEw
+2020-04-13 17:31:18.758 [main] INFO  Query.QueryTests - Score:1.2661426 business_id: V_CzgZ8maFoKv9t-LgcjDg
+2020-04-13 17:31:18.759 [main] INFO  Query.QueryTests - Query 14 Processing Time:1 milliseconds
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.7109404 business_id: KZa_81a6gEvbA_LQSq4IXg
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6605988 business_id: RRTAFcRPmlLaYIDGDS7gPA
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6605988 business_id: IPEf6HTV5vikiDLjn6wa-Q
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6605988 business_id: xlUoy-OVO-EgZzfiHJk1Hg
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6605988 business_id: lvoTojJLdtNHxrwVVkUe6w
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6605988 business_id: stCP0pdz5_3i7AAzmt5dSw
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6170275 business_id: 42DvUONuqa1mC1YbnZ0o0w
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6170275 business_id: XCup-bRuy_7c8JqM2Ryl_g
+2020-04-13 17:31:18.760 [main] INFO  Query.QueryTests - Score:2.6170275 business_id: bw0ZpeUwuLSgaCsQlksQsg
+2020-04-13 17:31:18.761 [main] INFO  Query.QueryTests - Score:2.6170275 business_id: MTDLV4bSPSWAbaJIgvcXpA
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Query 15 Processing Time:5 milliseconds
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: vchjO0Vs5FwW2tpFnCimqg
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: 24S-aiManGfjbb-fwwi2VQ
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: 6GW7g_YolSIcNwAiOHcc1g
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: tYW54lW_Ss-fDkPZD-2WeA
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: W8-Bsk_hHg5pxbt4EhmPWQ
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: CLdn-jOifbwtoKUvy9V_0Q
+2020-04-13 17:31:18.766 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: sIFa8r-wQNWl03qlBMukPg
+2020-04-13 17:31:18.767 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: wRxB3KwehZ8RNCZhzPE1LA
+2020-04-13 17:31:18.767 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: 1IR-he7F8PEwZQOAO-guqg
+2020-04-13 17:31:18.767 [main] INFO  Query.QueryTests - Score:4.0437264 business_id: jF3Ckb3OGG2Eu-wWjle2_g
+2020-04-13 17:31:18.769 [main] INFO  Query.QueryTests - Query 16 Processing Time:2 milliseconds
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: iWxv5qyiMEhuiUozY6limg
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: iWL7uxIpLvkFm3Jv8Humuw
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: g0yeRwvJmdd-XrH9lye0ww
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: upZ9FEpOh1Pr_GY-rUh0vw
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: v3gSujyy-PB8q9pSqot2Rg
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: IgZr5wCW4gZo51dOEiyNVw
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: wJK311GrpDS9KSaPdz27hQ
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: KMIGb4GJ6BcksShOdmneWA
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: 5UgSHCX-V0iXagxUZ9LEXg
+2020-04-13 17:31:18.770 [main] INFO  Query.QueryTests - Score:2.6709378 business_id: 5jFAsP4xlu8M2ew7qMTNVQ
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Query 17 Processing Time:10 milliseconds
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.272464 business_id: OGh-9alAEaqHkF975N_bbg
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.272464 business_id: XdcAC0DLroA0hm7bzkC_ow
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.272464 business_id: 6_pFtgBUD23wb0mBCSqoqA
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.1975 business_id: UEvT2XH9RVFaZQqmw_f4xQ
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.1975 business_id: fPKLjYJpNxZ0BQZQbumJdg
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.1975 business_id: jl9jG2QZibKuEqEjvsyfAQ
+2020-04-13 17:31:18.781 [main] INFO  Query.QueryTests - Score:3.1975 business_id: PlTL-4Y9UpNjjU0F_lL26w
+2020-04-13 17:31:18.782 [main] INFO  Query.QueryTests - Score:3.1289256 business_id: kpbhERZoj1eTDRnMVU2BKA
+2020-04-13 17:31:18.785 [main] INFO  Query.QueryTests - Score:3.1289256 business_id: uUdr0poadIUQb9iBz2g0Pw
+2020-04-13 17:31:18.785 [main] INFO  Query.QueryTests - Score:3.1289256 business_id: D57dZFqVrb5rov3CtoEPYA
+2020-04-13 17:31:18.787 [main] INFO  Query.QueryTests - Query 18 Processing Time:1 milliseconds
+2020-04-13 17:31:18.787 [main] INFO  Query.QueryTests - Score:1.3149554 business_id: macHk8_6D11iBp2HlbhFLg
+2020-04-13 17:31:18.787 [main] INFO  Query.QueryTests - Score:1.124139 business_id: xZtKQ6AFLh9P7rfmjvVjhw
+2020-04-13 17:31:18.787 [main] INFO  Query.QueryTests - Score:1.060762 business_id: qABb9Wzdn51VcNHdp_Qhpg
+2020-04-13 17:31:18.788 [main] INFO  Query.QueryTests - Score:0.9884707 business_id: apdb7MGnmnx6nGWBJ0ch_g
+2020-04-13 17:31:18.788 [main] INFO  Query.QueryTests - Score:0.91921026 business_id: N4AIlY5runouWKCMurrnvQ
+2020-04-13 17:31:18.794 [main] INFO  Query.QueryTests - Query 19 Processing Time:6 milliseconds
+2020-04-13 17:31:18.794 [main] INFO  Query.QueryTests - Score:2.67995 business_id: D-RQsQjEVI_w-KC7iDJd5Q
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: Ra5fI9BEAuWWaLJSfkiCiQ
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: wiPtQK7_QAkUUMQtyiaUNg
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: XSY26vVt9qvLh3SAECPzkg
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: sSEeW-U4N5TxalS58zuGrA
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: 6r2f7qd5NZBv1cLOzRVxKA
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: u6JJojkbqVlVI4NqKsL54Q
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: ATeOjZzE3VOI-RW7FUFJpQ
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: WJVDUT13ZpB698C8VN6tww
+2020-04-13 17:31:18.795 [main] INFO  Query.QueryTests - Score:2.67995 business_id: vtGwb-yl69LT96mHVllWeA
+2020-04-13 17:31:18.796 [main] INFO  Query.QueryTests - Query 20 Processing Time:1 milliseconds
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: feBEmxRAzUW4zgCLtxzhPQ
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: 2RjQN_KV8Yv4vuTzruuL9g
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: Z1YaY_qnupcsiGMGyh1zOA
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: cv8iMGIBtawW_4Imq8qPjw
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: ToC5TBp85mILzdaco-Ttpw
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: 0_rWCynqnCcmHKrEt6qi8Q
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: -raRJtfpxvBFYTCxhIkGzg
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: weIPRz9k778J_jt8muBkdQ
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: DRH2DRochKr7_sY2YOc2GA
+2020-04-13 17:31:18.797 [main] INFO  Query.QueryTests - Score:2.0498643 business_id: tdzRCSV_Ym3MgftaZZ3y9g

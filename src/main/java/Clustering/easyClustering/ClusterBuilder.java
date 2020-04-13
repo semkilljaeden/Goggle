@@ -57,10 +57,13 @@ public class ClusterBuilder extends Retriever {
             ClusterBuilder cb = new ClusterBuilder(IndexType.Business);
             cb.clustering();
             int count = 0;
+            int total = 0;
             for(Map.Entry<String, LinkedList<Integer>> s : cb.cluster.entrySet()) {
                 count++;
                 logger.info("Cluster " + count + " name(top frequent word):" + s.getKey() + " contains " + s.getValue().size() + " docs");
+                total += s.getValue().size();
             }
+            logger.info("Total docs = " + total);
         } catch (IOException e) {
             logger.error("cannot load index", e);
         }

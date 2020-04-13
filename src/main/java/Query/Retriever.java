@@ -1,6 +1,6 @@
 package Query;
 
-import Indexing.Utils;
+import Util.Utils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.lucene.analysis.AnalyzerWrapper;
@@ -29,9 +29,9 @@ public class Retriever {
     public Retriever() {
         try {
             businessReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath")+ "Business")));
-            //tipReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath") + "Tip")));
-            //reviewReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath") + "Review")));
-            //userReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath") + "User")));
+            tipReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath") + "Tip")));
+            reviewReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath") + "Review")));
+            userReader = DirectoryReader.open(FSDirectory.open(Paths.get(Utils.getProps("indexPath") + "User")));
             Analyzer = new AnalyzerWrapper(Analyzer.PER_FIELD_REUSE_STRATEGY) {
                 @Override
                 protected org.apache.lucene.analysis.Analyzer getWrappedAnalyzer(String fieldName) {
